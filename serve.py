@@ -1,3 +1,4 @@
+from fastapi.responses import RedirectResponse
 import pickle
 import xgboost as xgb
 from fastapi import FastAPI
@@ -45,6 +46,9 @@ class DeliveryData(BaseModel):
         }
     }
 
+@app.get("/", include_in_schema=False)
+def root():
+    return RedirectResponse(url="/docs")
 # 4. Create the prediction endpoint
 @app.post('/predict')
 def predict_delivery(data: DeliveryData):
