@@ -116,7 +116,7 @@ Below is a screenshot of the live cloud API successfully returning a prediction 
 You can also test the live cloud API directly from your terminal using `curl`:
 
 ```bash
-curl -X POST "[https://ecommerce-delivery-prediction-1ns3.onrender.com/predict](https://ecommerce-delivery-prediction-1ns3.onrender.com/predict)" \
+curl -X POST "https://ecommerce-delivery-prediction-1ns3.onrender.com/predict" \
      -H "Content-Type: application/json" \
      -d '{
            "warehouse_block": "D",
